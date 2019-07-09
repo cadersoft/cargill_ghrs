@@ -1,15 +1,13 @@
 
 .top_banner{
-    background-image: url('/assets/images/banner.png');
+    background-image: url('../../assets/images/banner.png');
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 450px;
-    
-    
+    min-height: 650px;
+    padding-top: 60px;
     position: relative;
-
 }
 .top_banner .content h2{
     font-size: 3rem;
@@ -19,16 +17,48 @@
     position: absolute;
     left: 0px;
     right: 0px;
-    bottom: 0px;
-    color: #fff;
+    top: 30%;
+    color: rgba(0, 95, 134, 1);
     padding: 50px;
-    background: #DCE35B;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(90deg, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(90deg, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(90deg, rgba(220, 227, 91, 0.8), rgba(0, 95, 134, 0.8));
+    
+    background: rgba(255, 255, 255, 0.5);  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(90deg, rgba(220, 227, 91, 0.2), rgba(0, 95, 134, 0.2));  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(90deg, rgba(220, 227, 91, 0.2), rgba(0, 95, 134, 0.2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: linear-gradient(90deg, rgba(220, 227, 91, 0.2), rgba(0, 95, 134, 0.2));*/
 }
 
 .center_text {
     text-align: center;
 }
 
+
+
+.tab{
+    display:flex;
+
+}
+.tab .tab-header>ul {
+    list-style: none;
+    margin: 0;
+    padding:0;
+    width  :150px;           
+}
+.tab .tab-header>ul>li {
+    border:1px solid #fff;
+    padding:15px;
+    margin-top:-1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.tab .tab-header>ul>li:hover, .tab .tab-header>ul>li.active {
+    background-color:#fff;
+    color:#005f86;
+}
+.tab .tab-body{
+    border:1px solid #fff;  
+    margin-top: -1px;
+    margin-left: -1px;
+    padding:50px;
+    flex: 1 100%;
+}

@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-.m-space{ 
-    margin: 100px 0px;
+
+.p-space{ 
+    padding: 100px 0px;
+}
+
+.bg-brand{
+    background-color: #005f86;
+    color: #ffffff;
+}
+
+.hide{
+    display: none;
 }
