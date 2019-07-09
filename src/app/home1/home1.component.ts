@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Home1Component implements OnInit {
 
+  selectedpopup = 0;
+  
   constructor() { }
 
   ngOnInit() {

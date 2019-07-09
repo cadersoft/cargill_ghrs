@@ -1,6 +1,6 @@
 .top_banner {
   width: 100%;
-  background-image: url('/../assets/images/1.png');
+  background-image: url('~/assets/images/1.png');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -43,7 +43,7 @@
 }
 
 .intro {
-  background-image: url('/assets/images/2.png');
+  background-image: url('~/assets/images/2.png');
   background-position: right center;
   background-size: cover;
 
@@ -51,16 +51,21 @@
 
 .intro_img {
   position: relative;
-  background-image: url('/assets/images/2.png');
+  background-image: url('~/assets/images/2.png');
   width: 100%;
 }
 
 .bg-brand {
   color: #fff;
-
   background-color: #005F86;
 }
 
+.bg-grey{
+  background-color: #eeeeee;
+}
+.full-width{
+  width:100%;
+}
 .intro-background {
   position: relative;
   background-color: #fff;
@@ -99,7 +104,7 @@
 }
 
 .project_team{
-    background-image: url('/assets/images/project_bg.jpg');
+    background-image: url('~/assets/images/project_bg.jpg');
     background-position: right center;
     background-attachment: fixed;
     background-size: cover;
@@ -149,4 +154,49 @@
     border-right:1px solid #005F86;
     border-left:1px solid #005F86;
     border-width:3px;
+}
+.clickable{
+  cursor: pointer;
+  text-align: center;
+  
+}
+.clickable img{
+  width: 100%;
+}
+.clickable h4{
+  margin-top:30px;
+  min-height:80px;
+}
+
+.relative {
+  position: relative;
+}
+
+.popup {
+  width: 100%;
+}
+
+.popup_panel {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  top: -450px;
+}
+
+@media only screen and (max-width: 992px) {
+  .popup {
+    width: 100%;
+    background-color: #00000099;
+    position: absolute;
+    left: 0;
+    height: 100%;
+  }
+  
+  .popup_panel {
+    left: 50%;
+    top: auto;
+    transform: translate(-50%, 50%);
+  }
+  
 }
