@@ -181,8 +181,110 @@
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
-  top: -450px;
+  position: absolute;
+  top: 450px;
+  z-index: 1;
 }
+.card{
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.card.shadow-lg:hover {
+  transform: scale(1.05);
+}
+.btn-outline-brand {
+  color: #005F86;
+  border-color: #005F86;
+}
+
+.btn-outline-brand:hover {
+  color: #fff;
+  background-color: #005F86;
+  border-color: #005F86;
+}
+
+.tab-head {
+  display: flex;
+}
+
+.tab-head .item {
+  border: 2px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 20px;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: all 0.3s ease;
+}
+.tab-head .item:hover {
+  border-color: #005F86;
+}
+.tab-head .item.active {
+  border-color: #005F86;
+  border-width: 2px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.tab-body {
+  border: 2px solid #005f86;
+  background-color: #005f86;
+  color: #fff;
+  padding: 20px;
+  margin-top: 5px;
+  border-radius: 0 0 10px 10px;
+}
+
+.img_org{
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  margin: 0 -15px;
+}
+
+.img1{
+  background-image: url('~/assets/images/img1.jpg');
+}
+
+.img2{
+  background-image: url('~/assets/images/img2.jpg');
+}
+
+.img3{
+  background-image: url('~/assets/images/img3.jpg');
+}
+
+.img4{
+  background-image: url('~/assets/images/img4.jpg');
+}
+
+.img5{
+  background-image: url('~/assets/images/img5.jpg');
+}
+
+.img6{
+  background-image: url('~/assets/images/img6.jpg');
+}
+.cargill_white_box {
+  text-align: center;
+  background-color: #fff;
+  color: #005f86;
+  font-size: 3rem;
+  padding: 10px 20px;
+  border-radius: 0 15px 0 15px;
+}
+.cargill_brand_box{
+  color: #fff;
+  background-color: #005f86;
+}
+
+.process{
+  max-width: 600px;
+  margin: 50px auto;
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 992px) {
   .popup {

@@ -59,6 +59,46 @@
 </section>
 
 
+<section>
+  <div class="container  pb-5">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card shadow-lg">
+          <img src="assets/images/card_1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Partnering with Business</h5>
+            <p class="card-text">Stakeholder involvement is critical for a successful reorganization. This section
+              describes recommended involvement of business stakeholders.</p>
+            <a href="#" class="btn btn-sm btn-outline-brand">More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card shadow-lg">
+          <img src="assets/images/card_2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Reorganization HR Team</h5>
+            <p class="card-text">Every reorganization has a specific HR team. This section describes the reorganization
+              team structure and responsibility.</p>
+            <a href="#" class="btn btn-sm btn-outline-brand">More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card shadow-lg">
+          <img src="assets/images/card_3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Responsibilities and Deliverables</h5>
+            <p class="card-text">Each HR domain is involved in an aspect of reorganization. This section describes the
+              roles and responsibilities of each HR domain.</p>
+            <a href="#" class="btn btn-sm btn-outline-brand">More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="bg-grey project_team">
   <div class="container">
     <div class="padding_tb">
@@ -68,96 +108,107 @@
           <h6>Recommended involvement of business stakeholders</h6>
         </div>
       </div>
+
+      <div class="popup relative" *ngIf="selectedpopup != 0">
+        <div class="popup_panel  ">
+          <button type="button" class="close" aria-label="Close" (click)="selectedpopup = 0">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div *ngIf="selectedpopup == 1">
+            <h3>Business HR Leader </h3>
+            <ul class="text-left pb-5 pr-5">
+              <li>Provides strategic leadership and expertise for the business; Strategic BHR Role LT level
+                activities</li>
+              <li>Sets HR strategy and governance for all people deliverables on project</li>
+              <li>HR deliverable approver and escalation for HR barriers</li>
+              <li>Ownership & accountability for HR delivery</li>
+              <li>Communicate key implications from business strategy to the project team</li>
+              <li>Monitor progress and adjust HR functional strategy as needed to optimize performance</li>
+              <li>Provides leadership and expertise on efficient people measures</li>
+            </ul>
+          </div>
+          <div *ngIf="selectedpopup == 2">
+            <h3>Business Project Design Team </h3>
+            <ul class="text-left">
+              <li>Responsible for the project deliverables</li>
+              <li>Maintains an appropriate level of stakeholder engagement throughout the various project phases
+              </li>
+              <li>Develops detailed recommendations for leadership team approval in accordance with stage gate
+                requirements</li>
+              <li>Conducts analysis to support: org design, span and layers optimization as related to an op model,
+                spans and layers or org restructure business need and primarily responsible for financial modeling
+                and
+                process for tracking value</li>
+            </ul>
+          </div>
+          <div *ngIf="selectedpopup == 3">
+            <h3>Business Leaders</h3>
+            <ul class="text-left">
+              <li>Provides leadership and expertise on efficient organizational measures, comparison to
+                competitors
+                or internal Cargill benchmarks for business</li>
+              <li>Responsible to achieve cost/benefit value and any other key measures identified for project/team
+                success</li>
+            </ul>
+          </div>
+          <div *ngIf="selectedpopup == 4">
+            <h3>Managers</h3>
+            <ul class="text-left">
+              <li>Provides strategic leadership and expertise for the business/department</li>
+              <li>Recommends key deliverables for their team to Business/Function Lead</li>
+              <li>Responsible for implementation of changes in team</li>
+              <li>Responsible for accurate HR data for their team</li>
+              <li>Responsible for partnering with Finance to track cost/benefit value and any other key measures
+                identified for project success</li>
+              <li>Communication of change impacts to employee populations and individuals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="row mt-5">
-        <div class="col-6 col-lg-3" >
+        <div class="col-6 col-lg-3">
           <div class="clickable text-center" (click)="selectedpopup = 1">
             <h4>Business HR Leader </h4>
-            <img src="assets/images/people1.png"          *ngIf="selectedpopup == 0 || selectedpopup == 1"  class="d-none d-lg-block" alt="">
-            <img src="assets/images/people1_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 1" class="d-none d-lg-block" alt="">
+            <img src="assets/images/people1.png" *ngIf="selectedpopup == 0 || selectedpopup == 1"
+              class="d-none d-lg-block" alt="">
+            <img src="assets/images/people1_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 1"
+              class="d-none d-lg-block" alt="">
             <img src="assets/images/user_1_md.png" class="d-block d-md-block d-lg-none" alt="">
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="clickable text-center" (click)="selectedpopup = 2">
-              <h4>Business Project Design Team </h4>
-            <img src="assets/images/people2.png"          *ngIf="selectedpopup == 0 || selectedpopup == 2" class="d-none d-lg-block" alt="">
-            <img src="assets/images/people2_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 2" class="d-none d-lg-block" alt="">
+            <h4>Business Project Design Team </h4>
+            <img src="assets/images/people2.png" *ngIf="selectedpopup == 0 || selectedpopup == 2"
+              class="d-none d-lg-block" alt="">
+            <img src="assets/images/people2_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 2"
+              class="d-none d-lg-block" alt="">
             <img src="assets/images/user_2_md.png" class="d-block d-md-block d-lg-none" alt="">
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="clickable text-center" (click)="selectedpopup = 3">
             <h4>Business Leaders</h4>
-            <img src="assets/images/people3.png"          *ngIf="selectedpopup == 0 || selectedpopup == 3" class="d-none d-lg-block" alt="">
-            <img src="assets/images/people3_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 3" class="d-none d-lg-block" alt="">
+            <img src="assets/images/people3.png" *ngIf="selectedpopup == 0 || selectedpopup == 3"
+              class="d-none d-lg-block" alt="">
+            <img src="assets/images/people3_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 3"
+              class="d-none d-lg-block" alt="">
             <img src="assets/images/user_3_md.png" class="d-block d-md-block d-lg-none" alt="">
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="clickable text-center" (click)="selectedpopup = 4">
             <h4>Managers</h4>
-            <img src="assets/images/people4.png"          *ngIf="selectedpopup == 0 || selectedpopup == 4" class="d-none d-lg-block" alt="">
-            <img src="assets/images/people4_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 4" class="d-none d-lg-block" alt="">
+            <img src="assets/images/people4.png" *ngIf="selectedpopup == 0 || selectedpopup == 4"
+              class="d-none d-lg-block" alt="">
+            <img src="assets/images/people4_selected.png" *ngIf="selectedpopup != 0 && selectedpopup != 4"
+              class="d-none d-lg-block" alt="">
             <img src="assets/images/user_4_md.png" class="d-block d-md-block d-lg-none" alt="">
           </div>
         </div>
 
-        <div class="popup " *ngIf="selectedpopup != 0">
-          <div class="popup_panel relative ">
-              <button type="button" class="close" aria-label="Close" (click)="selectedpopup = 0">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            <div *ngIf="selectedpopup == 1">
-                <h3>Business HR Leader </h3>
-              <ul class="text-left pb-5 pr-5">
-                <li>Provides strategic leadership and expertise for the business; Strategic BHR Role LT level
-                  activities</li>
-                <li>Sets HR strategy and governance for all people deliverables on project</li>
-                <li>HR deliverable approver and escalation for HR barriers</li>
-                <li>Ownership & accountability for HR delivery</li>
-                <li>Communicate key implications from business strategy to the project team</li>
-                <li>Monitor progress and adjust HR functional strategy as needed to optimize performance</li>
-                <li>Provides leadership and expertise on efficient people measures</li>
-              </ul>
-            </div>
-            <div *ngIf="selectedpopup == 2">
-                <h3>Business Project Design Team </h3>
-              <ul class="text-left">
-                <li>Responsible for the project deliverables</li>
-                <li>Maintains an appropriate level of stakeholder engagement throughout the various project phases
-                </li>
-                <li>Develops detailed recommendations for leadership team approval in accordance with stage gate
-                  requirements</li>
-                <li>Conducts analysis to support: org design, span and layers optimization as related to an op model,
-                  spans and layers or org restructure business need and primarily responsible for financial modeling
-                  and
-                  process for tracking value</li>
-              </ul>
-            </div>
-            <div *ngIf="selectedpopup == 3">
-                <h3>Business Leaders</h3>
-              <ul class="text-left">
-                <li>Provides leadership and expertise on efficient organizational measures, comparison to
-                  competitors
-                  or internal Cargill benchmarks for business</li>
-                <li>Responsible to achieve cost/benefit value and any other key measures identified for project/team
-                  success</li>
-              </ul>
-            </div>
-            <div *ngIf="selectedpopup == 4">
-                <h3>Managers</h3>
-              <ul class="text-left">
-                <li>Provides strategic leadership and expertise for the business/department</li>
-                <li>Recommends key deliverables for their team to Business/Function Lead</li>
-                <li>Responsible for implementation of changes in team</li>
-                <li>Responsible for accurate HR data for their team</li>
-                <li>Responsible for partnering with Finance to track cost/benefit value and any other key measures
-                  identified for project success</li>
-                <li>Communication of change impacts to employee populations and individuals</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
 
       </div>
     </div>
@@ -259,6 +310,131 @@
 </section>
 -->
 
+
+<section class="">
+  <div class="padding_tb text-brand">
+    <div class="container">
+        <h2>HR Business Reorganization Project Team</h2>
+        <p><strong>For every reorganization there is an HR team structure and responsibilities</strong></p>
+  
+      <div class="tab">
+        <div class="tab-head">
+          <div class="item"  *ngFor="let item of tabs; let i = index" [ngClass]="{'active' : i == selectedTab}" (click)="selectedTab = i">
+            <img src={{item.img}} alt="">
+            <div class="head">
+                {{item.head}}
+            </div>
+          </div>
+        </div>
+        <div class="tab-body">
+            <div class="item" *ngFor="let item of tabs; let i = index">
+              <div class="body" [innerHTML]="item.body" *ngIf="selectedTab == i">
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="container mt-3">
+          <div class="row">
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Pension & Benefits
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  HR Analytics
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Talent Acquisition
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Time &amp; Attendance/Vendor
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Employee Relations
+                  <br>
+                  Industrial Relations
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Compensation
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Employee Experience
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Change Management**
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+    
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  HR CBS
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Mobility
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  Payroll
+                  Local HRIS/vendor
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cargill_box bg-brand">
+                <div class="vertical-center">
+                  HR Global Data and Systems Updates*
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!--
 <section class="">
 
   <div class="padding_tb text-brand">
@@ -424,7 +600,7 @@
   </div>
 
 </section>
-
+-->
 
 
 <section class="bg-brand">
@@ -553,21 +729,22 @@
   </div>
 </section>
 
-<!--
+
 <section>
   <div class="container-fluid">
-    <div class="">
+    <div class="mb-5">
       <div class="text-center">
         <h2>ORGANIZATION DESIGN</h2>
         <h3>Process Overview</h3>
       </div>
     </div>
+
     <div class="row">
       <div class="col-6">
-        <div class="img1"></div>
+        <div class="img1 img_org"></div>
       </div>
       <div class="col-6 bg-brand">
-        <div class="p-5">
+        <div class="p-5 process" (click)="selectProcess(1)">
           <div class="row">
             <div class="col-3">
               <div class="cargill_white_box">
@@ -575,8 +752,8 @@
               </div>
             </div>
             <div class="col-9 text-white">
-              <h3>ASSESS</h3>
-              <h3>Explore</h3>
+              <h4>ASSESS</h4>
+              <p>Explore</p>
               <p>Assess current state and identify opportunities</p>
               <p>Align with sponsors the case for change</p>
             </div>
@@ -584,6 +761,121 @@
         </div>
       </div>
     </div>
+  
+  <div class="row">
+     
+      <div class="col-6 ">
+        <div class="p-5 process" (click)="selectProcess(2)">
+          <div class="row">
+            <div class="col-3">
+              <div class="cargill_white_box cargill_brand_box">
+                2
+              </div>
+            </div>
+            <div class="col-9 text-brand">
+              <h3>ANALYSE</h3>
+              <p>Develop</p>
+              <p>Apply leading practices and vision to develop design criteria and ideal Operating Model</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+          <div class="img2 img_org"></div>
+    </div>
   </div>
+
+  <div class="row">
+      <div class="col-6">
+        <div class="img3 img_org"></div>
+      </div>
+      <div class="col-6 bg-brand">
+        <div class="p-5 process" (click)="selectProcess(3)">
+          <div class="row">
+            <div class="col-3">
+              <div class="cargill_white_box">
+                3
+              </div>
+            </div>
+            <div class="col-9 text-white">
+              <h4>DESIGN</h4>
+              <p>Develop</p>
+              <p>Test and create organizational structures</p>
+              <p>Build a business case for the change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="row">
+     
+      <div class="col-6">
+        <div class="p-5 process" (click)="selectProcess(4)">
+          <div class="row">
+            <div class="col-3">
+              <div class="cargill_white_box cargill_brand_box">
+                4
+              </div>
+            </div>
+            <div class="col-9 text-brand">
+              <h3>PLAN</h3>
+              <p>Plan</p>
+              <p>Plan transition, create risk mitigation plans and determine pace of change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+          <div class="img4 img_org"></div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-6">
+        <div class="img5 img_org"></div>
+      </div>
+      <div class="col-6 bg-brand">
+        <div class="p-5 process" (click)="selectProcess(5)">
+          <div class="row">
+            <div class="col-3">
+              <div class="cargill_white_box">
+                5
+              </div>
+            </div>
+            <div class="col-9 text-white">
+              <h3>IMPLEMENT</h3>
+              <h3>Implement</h3>
+              <p>Transition the organization to the new structure and implement  consequential decision right, process and talent changes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="row">
+     
+      <div class="col-6">
+        <div class="p-5 process" (click)="selectProcess(6)">
+          <div class="row">
+            <div class="col-3">
+              <div class="cargill_white_box cargill_brand_box">
+                6
+              </div>
+            </div>
+            <div class="col-9 text-brand">
+              <h3>Sustain</h3>
+              <h3>Implement</h3>
+              <p>Create sustainment plan to ensure benefits realization and long-term adoption of the changes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+          <div class="img6 img_org"></div>
+    </div>
+  </div>
+
+</div>
 </section>
--->
+
